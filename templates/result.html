@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-result.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>ECG Prediction Result</h2>
+
+        <div class="patient-details">
+            <h3>Patient Details</h3>
+            <p><strong>Name:</strong> {{ patient_name }}</p>
+            <p><strong>Age:</strong> {{ patient_age }}</p>
+            <p><strong>Gender:</strong> {{ patient_gender }}</p>
+            <p><strong>ID:</strong> {{ patient_id }}</p>
+            <p><strong>Doctor Name:</strong> {{ doctor_name }}</p>
+            <p><strong>Symptoms:</strong> {{ patient_symptoms }}</p>
+        </div>
+
+        <div class="uploaded-image">
+            <h3>Uploaded Image</h3>
+            <img src="{{ url_for('static', filename='uploads/' + original.split('/')[-1]) }}" alt="Original ECG" class="img-fluid">
+        </div>
+
+        <div class="prediction-results">
+            <h3>Prediction Result</h3>
+            <h4><strong>Predicted Class:</strong> {{ predicted_classes1 }}</h4>
+            <br><br>
+            <img src="{{ url_for('static', filename='uploads/' + pred1.split('/')[-1]) }}" alt="Prediction 1" class="img-fluid">
+            <div class="download-section">
+                <a href="{{ url_for('static', filename='uploads/' + pred1.split('/')[-1]) }}" class="btn" download>Download Prediction Image 1</a>
+            </div>
+        </div>
+
+        <div class="prediction-results">
+            <!-- <h3>Model 2 Prediction Result</h3>
+            <h4><strong>Predicted Class:</strong> {{ predicted_classes2 }}</h4> -->
+            <img src="{{ url_for('static', filename='uploads/' + pred2.split('/')[-1]) }}" alt="Prediction 2" class="img-fluid">
+            <div class="download-section">
+                <a href="{{ url_for('static', filename='uploads/' + pred2.split('/')[-1]) }}" class="btn" download>Download Prediction Image 2</a>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="{{ url_for('dashboard') }}" class="btn">Go to Home</a>
+            <a href="{{ url_for('upload') }}" class="btn">New Prediction</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

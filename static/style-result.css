@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.patient-details {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded-image, .prediction-results {
+    margin-top: 20px;
+    justify-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-results {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff6f61, #de6a4d);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #de6a4d, #ff6f61);
+}
+
+img {
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.download-section {
+    margin-top: 20px;
+    text-align: center;
+}
